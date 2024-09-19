@@ -3,6 +3,8 @@ output/
 things/
 weights/
 notebooks/
+checkpoint/
+clevr_count/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

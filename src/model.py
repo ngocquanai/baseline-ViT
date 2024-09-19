@@ -15,7 +15,7 @@ from transformers.optimization import get_cosine_schedule_with_warmup
 
 from src.loss import SoftTargetCrossEntropy
 from src.mixup import Mixup
-from utils import block_expansion
+from src.utils import block_expansion
 
 MODEL_DICT = {
     "vit-b16-224-in21k": "google/vit-base-patch16-224-in21k",
@@ -63,6 +63,7 @@ class ClassificationModel(pl.LightningModule):
         lora_dropout: float = 0.0,
         lora_bias: str = "none",
         from_scratch: bool = False,
+        weights_path: str = 'checkpoint/B_16.pth',
     ):
         """Classification Model
 
